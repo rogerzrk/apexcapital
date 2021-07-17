@@ -1,0 +1,9 @@
+<h1>Editing Saving</h1>
+<br/>
+<%= render 'form', saving: @saving %>
+<br/>
+<%= link_to 'Show', @saving, class:"btn btn-secondary" %>
+<%= link_to 'Delete', @saving, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger"%>
+<%= link_to 'Back', savings_path, class:"btn btn-dark" %>
+
+

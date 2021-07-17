@@ -1,0 +1,8 @@
+<h1>Editing Loan</h1>
+<br/>
+<%= render 'form', loan: @loan %>
+<br/>
+<%= link_to 'Show', @loan, class:"btn btn-secondary" %>
+<%= link_to 'Delete', @loan, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger"%>
+<%= link_to 'Back', loans_path, class:"btn btn-dark" %>
+

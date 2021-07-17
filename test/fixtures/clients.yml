@@ -1,0 +1,47 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sur_name: MyString
+  first_name: MyString
+  other_name: MyString
+  gender: false
+  relationship_status: MyString
+  number_dependents: 1
+  nationality: MyString
+  profession: MyString
+  nin: MyString
+  phone_number1: MyString
+  phone_number2: MyString
+  r_village: MyString
+  r_parish: MyString
+  r_county: MyString
+  r_district: MyString
+  work_place: MyString
+  work_location: MyString
+  kin_surname: MyString
+  kin_firstname: MyString
+  kin_relation: MyString
+  kin_phone: MyString
+
+two:
+  sur_name: MyString
+  first_name: MyString
+  other_name: MyString
+  gender: false
+  relationship_status: MyString
+  number_dependents: 1
+  nationality: MyString
+  profession: MyString
+  nin: MyString
+  phone_number1: MyString
+  phone_number2: MyString
+  r_village: MyString
+  r_parish: MyString
+  r_county: MyString
+  r_district: MyString
+  work_place: MyString
+  work_location: MyString
+  kin_surname: MyString
+  kin_firstname: MyString
+  kin_relation: MyString
+  kin_phone: MyString

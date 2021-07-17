@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  form: MyString
+  category: MyString
+  account: MyString
+  doc_ref: MyString
+  amount: 1
+
+two:
+  form: MyString
+  category: MyString
+  account: MyString
+  doc_ref: MyString
+  amount: 1

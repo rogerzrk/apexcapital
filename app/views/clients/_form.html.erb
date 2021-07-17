@@ -1,0 +1,148 @@
+<%= form_with(model: client) do |form| %>
+  <% if client.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(client.errors.count, "error") %> prohibited this client from being saved:</h2>
+
+      <ul>
+        <% client.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+<form>
+  
+  <h4>Basic Information</h4>
+    <div class="mb-3">
+           <% form.label :sur_name %>
+           <%= form.text_field :sur_name, class:"form-control", placeholder:"Surname" %>
+    </div>
+
+    <div class="mb-3">
+           <% form.label :first_name %>
+           <%= form.text_field :first_name, class:"form-control", placeholder:"First Name" %>
+    </div>
+
+    <div class="mb-3">
+           <% form.label :other_name %>
+           <%= form.text_field :other_name, class:"form-control", placeholder:"Other Name" %>
+    </div>
+
+    
+    <div class="mb-3">
+        <b>Gender:</b>      
+        <%= form.radio_button :gender, 'Male', class:"form-check-input" %> Male
+        <%= form.radio_button :gender, 'Female', class:"form-check-input" %> Female<br />
+    </div>
+
+    <div class="mb-3">
+           <% form.label :nationality %>
+           <%= form.text_field :nationality, class:"form-control", placeholder:"Nationality" %>
+    </div>
+
+    <div class="mb-3">
+           <% form.label :nin %>
+           <%= form.text_field :nin, class:"form-control", placeholder:"NIN" %>
+    </div>
+
+    <div class="mb-3">
+           <% form.label :phone_number1 %>
+           <%= form.text_field :phone_number1, class:"form-control", placeholder:"Phone Number 1" %>
+    </div>
+
+    <div class="mb-3">
+           <% form.label :phone_number2 %>
+           <%= form.text_field :phone_number2, class:"form-control", placeholder:"Phone Number 2" %>
+    </div>
+
+     <div class="mb-3">
+           <% form.label :relationship_status %>
+           <%= form.text_field :relationship_status, class:"form-control", placeholder:"Relationship Status" %>
+    </div>
+
+    <div class="mb-3">
+           <% form.label :number_dependents %>
+           <%= form.text_field :number_dependents, class:"form-control", placeholder:"Number of Dependents"%>
+    </div>
+
+  <br/>
+  <h4>Place of Residence</h4>
+    <div class="mb-3">
+           <% form.label :r_village %>
+           <%= form.text_field :r_village, class:"form-control", placeholder:"Village" %>
+    </div>
+
+
+    <div class="mb-3">
+             <% form.label :r_parish %>
+             <%= form.text_field :r_parish, class:"form-control", placeholder:"Parish" %>
+      </div>
+
+
+    <div class="mb-3">
+             <% form.label :r_county %>
+             <%= form.text_field :r_county, class:"form-control", placeholder:"County" %>
+      </div>
+
+
+    <div class="mb-3">
+             <% form.label :r_district %>
+             <%= form.text_field :r_district, class:"form-control", placeholder:"District" %>
+    </div>
+
+
+  <br/>
+  <h4>Work</h4>
+    <div class="mb-3">
+           <% form.label :profession %>
+           <%= form.text_field :profession, class:"form-control", placeholder:"Profession or Business" %>
+    </div>
+    <div class="mb-3">
+             <% form.label :work_place %>
+             <%= form.text_field :work_place, class:"form-control", placeholder:"Work Place" %>
+    </div>
+
+    <div class="mb-3">
+             <% form.label :work_location %>
+             <%= form.text_field :work_location, class:"form-control", placeholder:"Work Location" %>
+    </div>
+
+  <br/>
+  <h4>Next of Kin</h4>
+    <div class="mb-3">
+             <% form.label :kin_surname %>
+             <%= form.text_field :kin_surname, class:"form-control", placeholder:"Surname" %>
+    </div>
+
+    <div class="mb-3">
+             <% form.label :kin_firstname %>
+             <%= form.text_field :kin_firstname, class:"form-control", placeholder:"Firstname" %>
+    </div>
+
+    <div class="mb-3">
+             <% form.label :kin_relation %>
+             <%= form.text_field :kin_relation, class:"form-control", placeholder:"Relation" %>
+    </div>
+
+    <div class="mb-3">
+             <% form.label :kin_phone %>
+             <%= form.text_field :kin_phone, class:"form-control", placeholder:"Phone Number" %>
+    </div>
+
+    <div class="actions">
+        <%= form.submit class: 'btn btn-secondary' %>
+    </div>
+
+</form>
+
+<% end %>
+
+
+
+
+
+
+
+

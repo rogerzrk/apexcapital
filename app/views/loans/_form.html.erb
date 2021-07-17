@@ -1,0 +1,81 @@
+<%= form_with(model: loan) do |form| %>
+  <% if loan.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(loan.errors.count, "error") %> prohibited this loan from being saved:</h2>
+
+      <ul>
+        <% loan.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+<form>
+    <div class="mb-3">
+      <%= form.label :doc_ref %>
+      <%= form.text_field :doc_ref, class:"form-control", placeholder:"Document Ref" %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.label :loan_amount %>
+      <%= form.number_field :loan_amount, class:"form-control", placeholder:"Loan Amount" %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.label :interest_rate %>
+      <%= form.number_field :interest_rate, class:"form-control", placeholder:"Interest Rate" %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.label :charges %>
+      <%= form.number_field :charges, class:"form-control", placeholder:"Loan Charges" %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.label :loan_period %>
+      <%= form.number_field :loan_period, class:"form-control", placeholder:"Loan Period" %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.label :payment_terms %>
+      <%= form.text_field :payment_terms, class:"form-control", placeholder:"Payment Terms" %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.label :loan_security %>
+      <%= form.text_field :loan_security, class:"form-control", placeholder:"Loan Security" %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.label :security_valuation %>
+      <%= form.number_field :security_valuation, class:"form-control", placeholder:"Security Valuation" %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.label :loan_guarantor %>
+      <%= form.text_field :loan_guarantor, class:"form-control", placeholder:"Loan Guarntor" %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.label :guarantor_tel %>
+      <%= form.text_field :guarantor_tel, class:"form-control", placeholder:"Gurantor Tel" %>
+    </div>
+
+    <div class="mb-3">
+      <%= form.label :guarantor_relation %>
+      <%= form.text_field :guarantor_relation, class:"form-control", placeholder:"Guarantor Relation" %>
+    </div>
+
+    <div class="actions">
+      <%= form.submit class: 'btn btn-secondary' %>
+    </div>
+
+</form>
+
+<% end %>
+
+
+
+

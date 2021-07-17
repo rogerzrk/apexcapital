@@ -1,0 +1,22 @@
+<div class="card w-75 bg-light ps-5">
+  <div class="card-body p-5 align-middle">
+  </br></br>
+    <h5 class="card-title fs-1"><%=@client.sur_name %> <%= @client.first_name %> <%= @client.other_name %></h5>
+    <h6 class="card-text fs-4"> Account Number: <%= @client.id + (@year*1000000) %> </h6><br/>
+    <p class="card-text fs-3"><%= @client.phone_number1 %> | <%= @client.phone_number1 %></p>
+    <p class="card-text fs-4"><% @client.gender %> <%= @client.relationship_status %> | <%= @client.nationality %></p>
+    <p class="card-text fs-4"> Number of Dependents: <%= @client.number_dependents %> | <%= @client.profession %> | NIN: <%= @client.nin %></p>
+    <p class="card-text fs-4">RESIDENCE: <%= @client.r_village %> | <%= @client.r_parish %> | <%= @client.r_county %> | <%= @client.r_district %> </p>
+    <p class="card-text fs-4">WORKPLACE: <%= @client.work_place %> <%= @client.work_location %></p>
+    <p class="card-text fs-4">NEXT OF KIN: <%= @client.kin_surname %> <%= @client.kin_firstname %> | <%= @client.kin_relation %> | <%= @client.kin_phone %> </p>
+    </br>
+    <%= link_to 'Edit', edit_client_path(@client), class:"btn btn-secondary" %>
+    <%= link_to 'Delete', @client, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger"%>
+    <%= link_to 'Back', clients_path, class:"btn btn-dark"  %>
+  </div>
+</div>
+
+
+
+
+

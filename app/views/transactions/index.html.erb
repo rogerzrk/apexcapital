@@ -1,0 +1,41 @@
+<div class="p-3" style="background-color:#dee1e3;">
+  <div class="p-4 bg-light"> 
+
+    <h1>Transactions</h1>
+
+    <table class="table table-striped table-hover table-bordered">
+        <thead class="table-dark">
+        <tr>
+          <th>Form</th>
+          <th>Category</th>
+          <th>Account</th>
+          <th>Doc ref</th>
+          <th>Amount</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @transactions.each do |transaction| %>
+          <tr>
+            <td><%= transaction.form %></td>
+            <td><%= transaction.category %></td>
+            <td><%= transaction.account %></td>
+            <td><%= transaction.doc_ref %></td>
+            <td><%= transaction.amount %></td>
+            <td><%= link_to 'Show', transaction %></td>
+            <td><%= link_to 'Edit', edit_transaction_path(transaction) %></td>
+            <td><%= link_to 'Destroy', transaction, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+    <br>
+
+    <%= link_to 'New Transaction', new_transaction_path,class:"btn btn-secondary" %>
+  </div>
+</div>
+
+
+

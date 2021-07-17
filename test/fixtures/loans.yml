@@ -1,0 +1,27 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  doc_ref: MyString
+  loan_amount: 1
+  interest_rate: 1
+  charges: 1
+  loan_period: 1
+  payment_terms: MyString
+  loan_security: MyString
+  security_valuation: 1
+  loan_guarantor: MyString
+  guarantor_tel: MyString
+  guarantor_relation: MyString
+
+two:
+  doc_ref: MyString
+  loan_amount: 1
+  interest_rate: 1
+  charges: 1
+  loan_period: 1
+  payment_terms: MyString
+  loan_security: MyString
+  security_valuation: 1
+  loan_guarantor: MyString
+  guarantor_tel: MyString
+  guarantor_relation: MyString

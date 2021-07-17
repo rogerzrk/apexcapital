@@ -1,0 +1,17 @@
+<div class="card w-75 bg-light ps-5">
+  <div class="card-body p-5 align-middle">
+  </br></br>
+    <% if false %> <h5 class="card-title fs-1"><%=@client.sur_name %> <%= @client.first_name %> <%= @client.other_name %></h5> <% end %>
+    
+      
+    <p class="card-text fs-4">Savings Status: <%= @saving.status %> | Savings Interest Rate:<%= @saving.interest_rate %> </p>
+   
+    
+    </br>
+    <%= link_to 'Edit', edit_saving_path(@saving), class:"btn btn-secondary" %> 
+    <%= link_to 'Delete', @saving, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger"%>
+    <%= link_to 'Back', savings_path, class:"btn btn-dark" %>
+
+  </div>
+</div>
+

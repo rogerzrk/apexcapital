@@ -1,0 +1,8 @@
+<h1>Editing Transaction</h1>
+<br/>
+<%= render 'form', transaction: @transaction %>
+<br/>
+<%= link_to 'Show', @transaction, class:"btn btn-secondary" %>
+<%= link_to 'Delete', @transaction, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger"%>
+<%= link_to 'Back', transactions_path, class:"btn btn-dark" %>
+

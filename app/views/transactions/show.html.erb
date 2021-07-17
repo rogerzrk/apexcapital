@@ -1,0 +1,19 @@
+<div class="card w-75 bg-light ps-5">
+  <div class="card-body p-5 align-middle">
+  </br></br>
+    <% if false %> <h5 class="card-title fs-1"><%=@client.sur_name %> <%= @client.first_name %> <%= @client.other_name %></h5> <% end %>
+    
+    <h5 class="card-title fs-1"><%= @transaction.amount %></h5> 
+    <p class="card-text fs-4">Transaction Form: <%= @transaction.form %> | Transaction Category: <%= @transaction.category %> | Account: <%= @transaction.account %> </p>
+    <p class="card-text fs-4">Transaction Doc Ref: <%= @transaction.doc_ref %> </p>
+   
+    
+    </br>
+    <%= link_to 'Edit', edit_transaction_path(@transaction), class:"btn btn-secondary" %> 
+    <%= link_to 'Delete', @transaction, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger"%>
+    <%= link_to 'Back', transactions_path, class:"btn btn-dark" %>
+
+  </div>
+</div>
+
+

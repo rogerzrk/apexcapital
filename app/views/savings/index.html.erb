@@ -1,0 +1,36 @@
+
+<h1>Savings</h1>
+
+<div class="p-3" style="background-color:#dee1e3;">    
+
+  <div class="p-4 bg-light">
+    <h1>Savings</h1>
+
+    <table class="table table-striped table-hover table-bordered">
+      <thead class="table-dark">
+        <tr>
+          <th>Status</th>
+          <th>Interest rate</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @savings.each do |saving| %>
+          <tr>
+            <td><%= saving.status %></td>
+            <td><%= saving.interest_rate %></td>
+            <td><%= link_to 'Show', saving %></td>
+            <td><%= link_to 'Edit', edit_saving_path(saving) %></td>
+            <td><%= link_to 'Destroy', saving, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+    <br>
+
+    <%= link_to 'New Saving', new_saving_path,class:"btn btn-secondary" %>  
+  </div>
+</div>
+

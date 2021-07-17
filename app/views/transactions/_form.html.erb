@@ -1,0 +1,51 @@
+<%= form_with(model: transaction) do |form| %>
+  <% if transaction.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(transaction.errors.count, "error") %> prohibited this transaction from being saved:</h2>
+
+      <ul>
+        <% transaction.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+<form>
+  <div class="mb-3">
+         <% form.label :form %>
+         <%= form.text_field :form, class:"form-control", placeholder:"Format" %>
+  </div>
+
+ <div class="mb-3">
+         <% form.label :category %>
+         <%= form.text_field :category, class:"form-control", placeholder:"Transaction Category" %>
+  </div>
+
+   <div class="mb-3">
+         <% form.label :account %>
+         <%= form.text_field :account, class:"form-control", placeholder:"Account" %>
+  </div>
+
+ <div class="mb-3">
+         <% form.label :doc_ref %>
+         <%= form.text_field :doc_ref, class:"form-control", placeholder:"Document Ref" %>
+  </div>
+
+   <div class="mb-3">
+         <% form.label :amount %>
+         <%= form.text_field :amount, class:"form-control", placeholder:"Transaction Amount" %>
+  </div>
+
+ 
+  <div class="actions">
+    <%= form.submit class: 'btn btn-secondary' %>
+  </div>
+
+</form>
+<% end %>
+
+
+
+

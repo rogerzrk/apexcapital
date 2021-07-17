@@ -1,0 +1,20 @@
+<div class="card w-75 bg-light ps-5">
+  <div class="card-body p-5 align-middle">
+  </br></br>
+    <% if false %> <h5 class="card-title fs-1"><%=@client.sur_name %> <%= @client.first_name %> <%= @client.other_name %></h5> <% end %>
+    <h6 class="card-text fs-4"> Loan Number: <%= @loan.id + 1000000 %> Loan Amount: <%= @loan.loan_amount %> Interst Rate: <%= @loan.interest_rate %> </h6><br/>
+      
+    <p class="card-text fs-4">DOC REF: <%= @loan.doc_ref %> | Loan Period: <%= @loan.loan_period %> | Loan Payment Terms: <%= @loan.payment_terms %></p>
+    <p class="card-text fs-4">Loan Security: <%= @loan.loan_security %> | Security Valuation: <%= @loan.security_valuation %> </p>
+    <p class="card-text fs-4">Loan Guarantor: <%= @loan.loan_guarantor %> |Guarantor Relation: <%= @loan.guarantor_relation %> | Guarantor Tel: <%= @loan.guarantor_tel %></p>
+    
+    </br>
+    <%= link_to 'Edit', edit_loan_path(@loan), class:"btn btn-secondary" %> 
+    <%= link_to 'Delete', @loan, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger"%>
+    <%= link_to 'Back', loans_path, class:"btn btn-dark" %>
+
+  </div>
+</div>
+
+
+

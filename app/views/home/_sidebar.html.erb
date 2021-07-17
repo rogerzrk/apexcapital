@@ -1,0 +1,50 @@
+<div class="d-flex flex-column flex-shrink-0 p-3 h-100 sticky-top" style="width: 350px; background-color:#c8cacc;">
+    <%= image_tag("Apex Logo 1.png", alt: "logo", size: "250x250", class: "like_image_for_index rounded") %>
+    <hr>
+    <ul class="nav nav-pills flex-column mb-auto d-grid gap-1"> 
+      
+    	<li class="nav-item">
+        <%= link_to 'HOME', root_path, class:"fs-5 btn"%>
+	    </li>
+
+      <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle fs-5 text-dark" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+            CREATE
+          </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><%= link_to 'NEW TRANSACTION', new_transaction_path, class:"dropdown-item"%></li>
+              <li><%= link_to 'NEW LOAN', new_loan_path, class:"dropdown-item"%></li>
+              <li><%= link_to 'NEW SAVINGS ACOUNT', new_saving_path, class:"dropdown-item"%></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><%= link_to 'NEW CLIENT', new_client_path, class:"dropdown-item"%></li>
+            </ul>
+      </li>
+
+      <li class="nav-item">
+        <%= link_to 'TRANSCATIONS', transactions_path, class:"fs-5 btn"%>
+      </li>
+      <li class="nav-item">
+        <%= link_to 'LOANBOOK', loans_path, class:"fs-5 btn"%>
+      </li>
+      <li class="nav-item">
+        <%= link_to 'SAVING BOOK', savings_path, class:"fs-5 btn"%>
+      </li>
+      <li class="nav-item">
+        <%= link_to 'CLIENTS', clients_path, class:"fs-5 btn"%>
+      </li>
+    
+    
+
+      <li class="nav-item">
+        <%= link_to 'ABOUT', home_about_path, class:"fs-5 btn"%>
+      </li>
+    </ul>
+
+    <hr>
+    <ul class="nav nav-pills flex-column mb-auto"> 
+      <li class="nav-item">
+        <a class="fs-5 btn">LOG OUT</a>
+      </li>
+    </ul>
+</div>
+
