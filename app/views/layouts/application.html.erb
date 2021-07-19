@@ -22,12 +22,35 @@
   <body style="background-color:#dee1e3;">
     
     <div class ="d-flex">
-      <%= render 'home/sidebar' %>
-      <main class="col-md-9 p-1">
-       <div class="container-fluid">
-          <%= yield %>
+
+      <% if user_signed_in? %>
+
+        <%= render 'home/sidebar' %>
+        <main class="col-md-9 p-1">
+        <div class="container-fluid">
+          
+            <% if notice %>
+            </br>
+              <%= render 'layouts/alerts'%>
+            <% end %>
+
+            <%= yield %>
         </div> 
       </main>
+      <% else %>
+        <% if notice %>
+          </br>
+          <%= render 'layouts/alerts'%>
+        <% end %>
+
+        <%= render 'home/splashpage' %>
+        <%= yield %>
+
+      <% end %>
+
+      
+
+
       
 
     </div>
