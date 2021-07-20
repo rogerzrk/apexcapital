@@ -38,13 +38,17 @@
         </div> 
       </main>
       <% else %>
-        <% if notice %>
-          </br>
-          <%= render 'layouts/alerts'%>
-        <% end %>
+        <main class=" p-3">
+          <div class="position-absolute top-50 start-50 translate-middle">
 
-        <%= render 'home/splashpage' %>
-        <%= yield %>
+            <% if notice %>
+              </br>
+              <%= render 'layouts/alerts'%>
+            <% end %>
+
+            <%= yield %>
+          </div>
+        </main>
 
       <% end %>
 

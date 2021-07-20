@@ -1,14 +1,27 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb
-.
-
-.
-.
 
 
 
+<% if user_signed_in? %>
+	<h1>Home#index</h1>
+	<p>Find me in app/views/home/index.html.erb
+	.
+
+	.
+	.
 
 
 
 
-</p>
+
+
+
+	</p>
+<% else %>
+	<div class= "card text-center w-90" style="background-color:#c8cacc">	
+		<%= image_tag("Apex Logo 1.png", alt: "logo", class: "like_image_for_index rounded") %>
+		<br/>
+		<h2><%= link_to 'SIGN IN', new_user_session_path, class:"btn btn-dark"%> </h2>
+	</div>
+<br/><br/>
+	<%= link_to 'New Account', new_user_registration_path, class:"btn btn-sm btn-secondary position-absolute bottom-0 end-0"%>
+<% end %>
