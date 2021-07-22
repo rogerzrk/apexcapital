@@ -10,13 +10,17 @@
       </ul>
     </div>
   <% end %>
-
+ 
 
 <form>
     <div class="mb-3">
       <%= form.label :doc_ref %>
       <%= form.text_field :doc_ref, class:"form-control", placeholder:"Document Ref" %>
     </div>
+
+      <h5>Client</h5>
+      <%=form.collection_select(:client_id, Client.all, :id, :sur_name, prompt: true )%>
+      </br></br></br>
 
     <div class="mb-3">
       <%= form.label :loan_amount %>
@@ -71,6 +75,9 @@
     <div class="actions">
       <%= form.submit class: 'btn btn-secondary' %>
     </div>
+
+
+    <%= form.hidden_field :account_id, value: 1 %>
 
 </form>
 

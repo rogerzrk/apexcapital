@@ -1,0 +1,32 @@
+<%= form_with(model: apextransaction) do |form| %>
+  <% if apextransaction.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(apextransaction.errors.count, "error") %> prohibited this apextransaction from being saved:</h2>
+
+      <ul>
+        <% apextransaction.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :time %>
+    <%= form.datetime_select :time %>
+  </div>
+
+  <div class="field">
+    <%= form.label :transaction_id %>
+    <%= form.text_field :transaction_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

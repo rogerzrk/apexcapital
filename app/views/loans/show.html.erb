@@ -7,6 +7,9 @@
     <p class="card-text fs-4">DOC REF: <%= @loan.doc_ref %> | Loan Period: <%= @loan.loan_period %> | Loan Payment Terms: <%= @loan.payment_terms %></p>
     <p class="card-text fs-4">Loan Security: <%= @loan.loan_security %> | Security Valuation: <%= @loan.security_valuation %> </p>
     <p class="card-text fs-4">Loan Guarantor: <%= @loan.loan_guarantor %> |Guarantor Relation: <%= @loan.guarantor_relation %> | Guarantor Tel: <%= @loan.guarantor_tel %></p>
+
+    <p class="card-text fs-4">Account Type Id: <%= @loan.account.name %> | Account Name: <%= @loan.client.sur_name %> </p>
+
     
     </br>
     <%= link_to 'Edit', edit_loan_path(@loan), class:"btn btn-secondary" %> 

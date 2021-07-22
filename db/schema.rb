@@ -10,7 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_19_082624) do
+ActiveRecord::Schema.define(version: 2021_07_22_095757) do
+
+  create_table "accounts", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "apextransactions", force: :cascade do |t|
+    t.string "description"
+    t.datetime "time"
+    t.integer "transaction_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["transaction_id"], name: "index_apextransactions_on_transaction_id"
+  end
 
   create_table "clients", force: :cascade do |t|
     t.string "sur_name"
@@ -52,6 +67,10 @@ ActiveRecord::Schema.define(version: 2021_07_19_082624) do
     t.string "guarantor_relation"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "account_id"
+    t.integer "client_id"
+    t.index ["account_id"], name: "index_loans_on_account_id"
+    t.index ["client_id"], name: "index_loans_on_client_id"
   end
 
   create_table "savings", force: :cascade do |t|
@@ -64,11 +83,16 @@ ActiveRecord::Schema.define(version: 2021_07_19_082624) do
   create_table "transactions", force: :cascade do |t|
     t.string "form"
     t.string "category"
-    t.string "account"
     t.string "doc_ref"
     t.integer "amount"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "loan_id"
+    t.string "account_type"
+    t.integer "account_id"
+    t.index ["account_id"], name: "index_transactions_on_account_id"
+    t.index ["account_type"], name: "index_transactions_on_account_type"
+    t.index ["loan_id"], name: "index_transactions_on_loan_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -83,4 +107,5 @@ ActiveRecord::Schema.define(version: 2021_07_19_082624) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "apextransactions", "transactions"
 end

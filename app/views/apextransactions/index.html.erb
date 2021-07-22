@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Apextransactions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Description</th>
+      <th>Time</th>
+      <th>Transaction</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @apextransactions.each do |apextransaction| %>
+      <tr>
+        <td><%= apextransaction.description %></td>
+        <td><%= apextransaction.time %></td>
+        <td><%= apextransaction.transaction_id %></td>
+        <td><%= link_to 'Show', apextransaction %></td>
+        <td><%= link_to 'Edit', edit_apextransaction_path(apextransaction) %></td>
+        <td><%= link_to 'Destroy', apextransaction, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Apextransaction', new_apextransaction_path %>

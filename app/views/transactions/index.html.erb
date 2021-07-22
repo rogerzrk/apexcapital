@@ -9,6 +9,7 @@
           <th>Form</th>
           <th>Category</th>
           <th>Account</th>
+          <th>Loan</th>
           <th>Doc ref</th>
           <th>Amount</th>
           <th colspan="3"></th>
@@ -20,7 +21,8 @@
           <tr>
             <td><%= transaction.form %></td>
             <td><%= transaction.category %></td>
-            <td><%= transaction.account %></td>
+            <td><%= transaction.account_id %></td>
+            <td><%= transaction.loan.client.sur_name %></td>
             <td><%= transaction.doc_ref %></td>
             <td><%= transaction.amount %></td>
             <td><%= link_to 'Show', transaction %></td>

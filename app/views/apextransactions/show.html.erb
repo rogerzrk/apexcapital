@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @apextransaction.description %>
+</p>
+
+<p>
+  <strong>Time:</strong>
+  <%= @apextransaction.time %>
+</p>
+
+<p>
+  <strong>Transaction:</strong>
+  <%= @apextransaction.transaction_id %>
+</p>
+
+<%= link_to 'Edit', edit_apextransaction_path(@apextransaction) %> |
+<%= link_to 'Back', apextransactions_path %>
